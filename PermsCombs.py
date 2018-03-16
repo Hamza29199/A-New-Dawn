@@ -1,56 +1,44 @@
-a=input("Enter your desired computation: ")
+"""A program which computes permutations and combinations of values entered by user"""
 
-b=input("Enter your first number: ")
+#following function takes in an int parameter
+# and computes its factorial recursively
 
-b1=int(b)
+def factorial(num):
 
-c=input("Enter your second number: ")
+	if num > 1:
 
-c1=int(c)
+		return num * factorial(num-1)
 
-bc=int(b1)-int(c1)
 
-g=int(bc)
+	return 1 #the terminating condition for our recursive func
 
-d=1
 
-f=1
 
-h=1
+#defining functions for determining perms and combs below
 
-if str(a)=="p":
-    
-    while(d<b1):
-        b=int(b)*(b1-int(d))
-        d=int(d)+1
-        
-    if b1==c1:
-        print("The answer is %d" % b)
-        
-    else:
+def permutation(n, r):
 
-        while(f<g):
-            bc=int(bc)*(g-int(f))
-            f=int(f)+1
-        print("The answer is %d" % (b/bc))
+	return (factorial(n)/factorial(n-r))
 
-if str(a)=="c":
 
-    if b1==c1:
-        print("The answer is 1")
-        
-    else:
-        
-        while(d<b1):
-            b=int(b)*(b1-int(d))
-            d=int(d)+1
-        
-        while(f<g):
-            bc=int(bc)*(g-int(f))
-            f=int(f)+1
-        
-        while(h<c1):
-            c=int(c)*(c1-int(h))
-            h=int(h)+1
-        
-        print("The answer is %d" % (b/(bc*c)))
+def combination(n, r):
+
+	return (factorial(n)/(factorial(n-r) * factorial(r)))
+
+
+#taking user inputs for the computation, and values of n and r
+
+choice = str(input("Which computation would you like to perform?(Enter ""p"" or ""c"" for perm and comb respectively)"))
+
+n= int(input("Enter the number of objects in your set(n): "))
+
+
+
+if(choice == "p"):
+    r= int(input("Enter the number of times you want to permute your objects(r): "))
+	print("Your result is %d.", permutation(n, r))
+
+
+elif(choice == "c"):
+    r= int(input("Enter the number of times you want to combine your objects(r): "))
+	print("Your result is %d.", combination(n, r))
