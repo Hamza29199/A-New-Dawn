@@ -36,9 +36,9 @@ n= int(input("Enter the number of objects in your set(n): "))
 
 if(choice == "p"):
     r= int(input("Enter the number of times you want to permute your objects(r): "))
-	print("Your result is %d.", permutation(n, r))
+    print("Your result is %d.", permutation(n, r))
 
 
 elif(choice == "c"):
     r= int(input("Enter the number of times you want to combine your objects(r): "))
-	print("Your result is %d.", combination(n, r))
+    print("Your result is %d.", combination(n, r))
