@@ -27,7 +27,7 @@ def waitForPlayerToPressKey():
                     terminate()
                 return
             
-
+#note: The "baddies" at any point in the code refers to the falling girls :)
 
 def playerHasHitBaddie(playerRect, baddies):
     for b in baddies:
@@ -55,24 +55,10 @@ font = pygame.font.SysFont(None, 48)
 # set up sounds
 
 # set up images
-playerImage = pygame.image.load('girl.png')
+playerImage = pygame.image.load('boy.png')
 playerRect = playerImage.get_rect()
-baddieImage = pygame.image.load('square.png')
-
-
-'''def collision(playerImage, baddieImage):
-    pRectHwidth= playerImage.get_width()/2
-    pRectHheight= playerImage.get_height()/2
-    bRectHwidth= baddieImage.get_width()/2
-    bRectHheight= baddieImage.get_height()/2
-    for b in baddies:
-        
-        distanceX=abs(playerRect.centerx-b['rect'].centerx)
-        distanceY=abs(playerRect.centery-b['rect'].centery)
-    
-        if distanceX < (pRectHwidth+bRectHwidth) and distanceY < (bRectHheight+pRectHheight):
-            return True
-    return False'''       
+baddieImage = pygame.image.load('girl.png')
+ 
 
 # show the "Start" screen
 drawText('Dodger', font, windowSurface, (WINDOWWIDTH / 3), (WINDOWHEIGHT / 3))
