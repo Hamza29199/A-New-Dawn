@@ -1,0 +1,1 @@
+This repository basically consists of projects that I've attempted with Python, ranging from sorting algorithm implementations to a 2D game. The purpose of creating it was to start off on GitHub, and to showcase a diverse range of projects for a beginner looking for project ideas in Python or any language for that matter  
